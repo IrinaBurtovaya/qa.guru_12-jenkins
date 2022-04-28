@@ -13,7 +13,6 @@ public class TestBase {
     @BeforeAll
     public static void openPage() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         open("https://demoqa.com/automation-practice-form");
 
