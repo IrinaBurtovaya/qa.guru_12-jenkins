@@ -38,7 +38,7 @@ allure {
     }
 }
 
-test {
+tasks.withType(Test) {
     useJUnitPlatform()
 
     testLogging {

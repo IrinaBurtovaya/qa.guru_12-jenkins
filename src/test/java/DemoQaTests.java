@@ -1,5 +1,4 @@
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +9,7 @@ public class DemoQaTests {
     public static void openPage() {
         Configuration.holdBrowserOpen = true;
         Configuration.browserSize = "1920x1080";
-        Selenide.open("https://demoqa.com/automation-practice-form");
+        open("https://demoqa.com/automation-practice-form");
     }
 
     @Test
