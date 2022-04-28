@@ -2,6 +2,7 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Selenide.executeJavaScript;
 import static com.codeborne.selenide.Selenide.open;
 
 public class DemoQaTests {
@@ -17,6 +18,8 @@ public class DemoQaTests {
     void checkFormFilled() {
         RegistrationFormPage registrationFormPage = new RegistrationFormPage(); //не нужно создавать метод main,
         // т.к. аннотация @Test позволяет создавать объекты другого класса внутри себя.
+        executeJavaScript("$('footer').remove()");// Отключает футер.
+        executeJavaScript("$('#fixedban').remove()");// Отключает рекламу.
 
         registrationFormPage.setFirstName()
                 .setLastName()

@@ -22,8 +22,8 @@ public class RegistrationFormPage {
     File file = new File("src/test/resources/wolf.jpg");
     String pictureName = "wolf.jpg";
     String address = "myPlace";
-    String state = "Haryana";
-    String city = "Karnal";
+    String state = "NCR";
+    String city = "Delhi";
 
     public RegistrationFormPage setFirstName() {
         $("#firstName").setValue(firstName);
