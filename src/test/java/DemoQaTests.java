@@ -8,9 +8,8 @@ public class DemoQaTests {
     @BeforeAll
     public static void openPage() {
         Configuration.holdBrowserOpen = true;
-        Configuration.baseUrl = "https://demoqa.com/";
         Configuration.browserSize = "1920x1080";
-        open("automation-practice-form");
+        open("https://demoqa.com/automation-practice-form");
     }
 
     @Test
