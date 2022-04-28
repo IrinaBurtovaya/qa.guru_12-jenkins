@@ -11,7 +11,6 @@ public class DemoQaTests {
         Configuration.holdBrowserOpen = true;
         Configuration.browserSize = "1920x1080";
         open("https://demoqa.com/automation-practice-form");
-        sleep(7000);
     }
 
     @Test
