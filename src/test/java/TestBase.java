@@ -17,12 +17,12 @@ public class TestBase {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-        open("https://demoqa.com/automation-practice-form");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
+        open("https://demoqa.com/automation-practice-form");
     }
 
     @AfterEach
