@@ -62,3 +62,9 @@ task demoqa (type:Test) {
         includeTags "demoqa"
     }
 }
+
+task tag (type:Test) {
+    useJUnitPlatform {
+        includeTags "tag"
+    }
+}
