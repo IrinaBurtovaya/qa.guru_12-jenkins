@@ -17,7 +17,7 @@ public class TestBase {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         Configuration.browserSize = "1920x1080";
-        Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + config.hub();
+        Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + "selenoid.autotests.cloud/wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
