@@ -68,3 +68,8 @@ task tag (type:Test) {
         includeTags "tag"
     }
 }
+task url (type:Test) {
+    useJUnitPlatform {
+        includeTags "url"
+    }
+}
