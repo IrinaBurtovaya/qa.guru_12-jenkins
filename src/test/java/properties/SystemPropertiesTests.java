@@ -20,6 +20,7 @@ public class SystemPropertiesTests {
         Configuration.browserVersion = propertyVersion;
         Configuration.browserSize = propertyBrowserSize;
 
+
         Selenide.open("https://yandex.ru/");
     }
 
