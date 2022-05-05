@@ -7,14 +7,12 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import static com.codeborne.selenide.Selenide.open;
-
 public class TestBase {
 
     @BeforeAll
     public static void openPage() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-        Configuration.baseUrl = "https://demoqa.com";
+
         Configuration.browserSize = "1920x1080";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
@@ -22,7 +20,6 @@ public class TestBase {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
-        open("https://demoqa.com/automation-practice-form");
     }
 
     @AfterEach
