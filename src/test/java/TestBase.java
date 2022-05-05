@@ -11,14 +11,14 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class TestBase {
     static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
-    static String selenoidUrl = System.getProperty("selenoidUrl", "selenoid.autotests.cloud/wd/hub");
+    static String selenoid = System.getProperty("selenoid", "selenoid.autotests.cloud/wd/hub");
 
     @BeforeAll
     public static void openPage() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         Configuration.browserSize = "1920x1080";
-        Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + selenoidUrl;
+        Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + selenoid;
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
