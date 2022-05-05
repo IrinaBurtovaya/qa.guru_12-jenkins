@@ -11,10 +11,9 @@ public class OwnerTests {
     void loginTest() {
         String login = config.login();
         String password = config.password();
-        String hub = config.hub();
 
         System.out.println(login);
         System.out.println(password);
-        System.out.println(hub);
+
     }
 }
