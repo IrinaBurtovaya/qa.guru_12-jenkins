@@ -1,0 +1,1 @@
+java "-DconfigFile=notifications/tg.json" -jar allure-notifications-4.1.jar
